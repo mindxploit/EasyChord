@@ -1,0 +1,31 @@
+{
+  "files": {
+    "main.js": "/EasyChord/static/js/main.399a844f.chunk.js",
+    "main.js.map": "/EasyChord/static/js/main.399a844f.chunk.js.map",
+    "runtime-main.js": "/EasyChord/static/js/runtime-main.0f8f4ef3.js",
+    "runtime-main.js.map": "/EasyChord/static/js/runtime-main.0f8f4ef3.js.map",
+    "static/js/2.db744f9e.chunk.js": "/EasyChord/static/js/2.db744f9e.chunk.js",
+    "static/js/2.db744f9e.chunk.js.map": "/EasyChord/static/js/2.db744f9e.chunk.js.map",
+    "index.html": "/EasyChord/index.html",
+    "precache-manifest.4aa45cd4adb3d5dea07a6e3435f877ce.js": "/EasyChord/precache-manifest.4aa45cd4adb3d5dea07a6e3435f877ce.js",
+    "service-worker.js": "/EasyChord/service-worker.js",
+    "static/js/2.db744f9e.chunk.js.LICENSE.txt": "/EasyChord/static/js/2.db744f9e.chunk.js.LICENSE.txt",
+    "static/media/A.png": "/EasyChord/static/media/A.6dd125b7.png",
+    "static/media/Ab.png": "/EasyChord/static/media/Ab.f4c10e2f.png",
+    "static/media/B.png": "/EasyChord/static/media/B.e0e99972.png",
+    "static/media/Bb.png": "/EasyChord/static/media/Bb.b4219f70.png",
+    "static/media/C.png": "/EasyChord/static/media/C.46dc201c.png",
+    "static/media/C_sharp.png": "/EasyChord/static/media/C_sharp.a686d19b.png",
+    "static/media/D.png": "/EasyChord/static/media/D.a3a729fc.png",
+    "static/media/E.png": "/EasyChord/static/media/E.d9529ff7.png",
+    "static/media/Eb.png": "/EasyChord/static/media/Eb.a314bb68.png",
+    "static/media/F.png": "/EasyChord/static/media/F.2df25dd5.png",
+    "static/media/F_sharp.png": "/EasyChord/static/media/F_sharp.bfee555e.png",
+    "static/media/G.png": "/EasyChord/static/media/G.f0f799d3.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.0f8f4ef3.js",
+    "static/js/2.db744f9e.chunk.js",
+    "static/js/main.399a844f.chunk.js"
+  ]
+}

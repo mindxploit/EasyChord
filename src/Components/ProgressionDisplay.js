@@ -64,18 +64,25 @@ function ProgressionDisplay() {
 
 	return (
 		<div>
-			<Paper style={{ marginTop: 20, marginBottom: 20 }} elevation={3}>
-				<Typography variant="h1" align="center">
-					{romanProg}
-				</Typography>
-			</Paper>
 			<Grid container direction="column" alignItems="center" justify="center" spacing={3}>
+				<Grid item>
+					<Typography align="center" variant="h2">
+						Let's find the best chord progression for you.
+					</Typography>
+				</Grid>
 				<Grid item>
 					<Key type={type} />
 				</Grid>
 				<Grid item>
 					<Switch checked={type === "minor" ? false : true} onChange={handleChange} />
 					<Typography variant="button">{type}</Typography>
+				</Grid>
+				<Grid item>
+					<Paper style={{ marginBottom: 10, padding: 10 }} elevation={3}>
+						<Typography variant="h1" align="center">
+							{romanProg}
+						</Typography>
+					</Paper>
 				</Grid>
 				<Grid item>
 					<Button variant="contained" onClick={() => handleClick()}>

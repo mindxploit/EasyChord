@@ -12,6 +12,7 @@ function CardDisplay({ type, scale, displayDescription }) {
 					flexDirection: "column",
 					alignItems: "center",
 					justifyContent: "center",
+					maxWidth: 600,
 				}}
 			>
 				<img

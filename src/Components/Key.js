@@ -76,27 +76,29 @@ function Key({ type }) {
 
 	return (
 		<div>
-			<Grid container direction="column" spacing={3}>
+			<Grid container direction="column" spacing={3} alignItems="center">
 				<Grid item>
 					<CardDisplay type={type} scale={scale} displayDescription={displayDescription} />
 				</Grid>
-				<FormControl style={{ marginBottom: 10, marginTop: 5 }}>
-					<InputLabel id="scale-key">Key</InputLabel>
-					<Select labelId="key" id="key-selector" value={scale} onChange={handleChange}>
-						<MenuItem value="A">A</MenuItem>
-						<MenuItem value="Ab">Ab</MenuItem>
-						<MenuItem value="B">B</MenuItem>
-						<MenuItem value="Bb">Bb</MenuItem>
-						<MenuItem value="C">C</MenuItem>
-						<MenuItem value="C_sharp">C#</MenuItem>
-						<MenuItem value="D">D</MenuItem>
-						<MenuItem value="E">E</MenuItem>
-						<MenuItem value="Eb">Eb</MenuItem>
-						<MenuItem value="F">F</MenuItem>
-						<MenuItem value="F_sharp">F#</MenuItem>
-						<MenuItem value="G">G</MenuItem>
-					</Select>
-				</FormControl>
+				<Grid item>
+					<FormControl style={{ marginBottom: 5, marginTop: 5 }}>
+						<InputLabel id="scale-key">Key</InputLabel>
+						<Select labelId="key" id="key-selector" value={scale} onChange={handleChange}>
+							<MenuItem value="A">A</MenuItem>
+							<MenuItem value="Ab">Ab</MenuItem>
+							<MenuItem value="B">B</MenuItem>
+							<MenuItem value="Bb">Bb</MenuItem>
+							<MenuItem value="C">C</MenuItem>
+							<MenuItem value="C_sharp">C#</MenuItem>
+							<MenuItem value="D">D</MenuItem>
+							<MenuItem value="E">E</MenuItem>
+							<MenuItem value="Eb">Eb</MenuItem>
+							<MenuItem value="F">F</MenuItem>
+							<MenuItem value="F_sharp">F#</MenuItem>
+							<MenuItem value="G">G</MenuItem>
+						</Select>
+					</FormControl>
+				</Grid>
 			</Grid>
 		</div>
 	);

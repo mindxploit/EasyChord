@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/EasyChord/static/css/main.c6c2b12b.chunk.css",
-    "main.js": "/EasyChord/static/js/main.3a41877f.chunk.js",
-    "main.js.map": "/EasyChord/static/js/main.3a41877f.chunk.js.map",
+    "main.js": "/EasyChord/static/js/main.18b0dd6f.chunk.js",
+    "main.js.map": "/EasyChord/static/js/main.18b0dd6f.chunk.js.map",
     "runtime-main.js": "/EasyChord/static/js/runtime-main.0f8f4ef3.js",
     "runtime-main.js.map": "/EasyChord/static/js/runtime-main.0f8f4ef3.js.map",
     "static/js/2.6dcb87d6.chunk.js": "/EasyChord/static/js/2.6dcb87d6.chunk.js",
     "static/js/2.6dcb87d6.chunk.js.map": "/EasyChord/static/js/2.6dcb87d6.chunk.js.map",
     "index.html": "/EasyChord/index.html",
-    "precache-manifest.a71333c6fca00f41d85e51498e4a5410.js": "/EasyChord/precache-manifest.a71333c6fca00f41d85e51498e4a5410.js",
+    "precache-manifest.fd003d78fdb37264e7f0439db98e0658.js": "/EasyChord/precache-manifest.fd003d78fdb37264e7f0439db98e0658.js",
     "service-worker.js": "/EasyChord/service-worker.js",
     "static/css/main.c6c2b12b.chunk.css.map": "/EasyChord/static/css/main.c6c2b12b.chunk.css.map",
     "static/js/2.6dcb87d6.chunk.js.LICENSE.txt": "/EasyChord/static/js/2.6dcb87d6.chunk.js.LICENSE.txt",
@@ -29,6 +29,6 @@
     "static/js/runtime-main.0f8f4ef3.js",
     "static/js/2.6dcb87d6.chunk.js",
     "static/css/main.c6c2b12b.chunk.css",
-    "static/js/main.3a41877f.chunk.js"
+    "static/js/main.18b0dd6f.chunk.js"
   ]
 }

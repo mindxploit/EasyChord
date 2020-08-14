@@ -2,13 +2,13 @@ import React from "react";
 import Selector from "./Selector";
 import Piano from "./Piano";
 import Description from "./Description";
-import { Box, Container } from "@material-ui/core";
+import { Box } from "@material-ui/core";
 
 const Scale = () => {
 	return (
-		<div style={{ padding: "0 3em", margin: "5em 0" }}>
+		<div style={{ width: "90%", margin: "auto", padding: "3em 0" }}>
 			<Box display="flex" justifyContent="space-between" alignItems="flex-start">
-				<Box>
+				<Box width="100%" maxWidth="687px" maxHeight="227px">
 					<Piano />
 				</Box>
 				<Box

@@ -56,7 +56,7 @@ const Description = () => {
 	};
 	const displayDescription = scaleDescriptions[mode][scale];
 
-	return <p style={{ fontSize: "1.5rem", marginLeft: "0.4em" }}>{displayDescription}</p>;
+	return <p style={{ fontSize: "1.5rem", margin: "0.4em 0 0 0.4em" }}>{displayDescription}</p>;
 };
 
 export default Description;

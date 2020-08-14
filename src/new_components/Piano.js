@@ -6,7 +6,7 @@ const Piano = () => {
 	const [mode] = useContext(ModeContext);
 	return (
 		<img
-			style={{ width: 687, maxWidth: 687, maxHeight: 227 }}
+			style={{ width: 687, maxWidth: 687, maxHeight: 227, height: "100%", display: "block" }}
 			src={require(`../Components/Scales/${mode}_scales/${scale}.png`)}
 			alt="scale"
 		/>

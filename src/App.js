@@ -1,12 +1,14 @@
 import React from "react";
-import { Typography, Container } from "@material-ui/core";
-import ProgressionDisplay from "./Components/ProgressionDisplay";
+import Main from "./new_components/Main";
+
+import "./assets/App.css";
+import { GlobalContext } from "./new_components/Context";
 
 function App() {
 	return (
-		<Container>
-			<ProgressionDisplay />
-		</Container>
+		<GlobalContext>
+			<Main />
+		</GlobalContext>
 	);
 }
 

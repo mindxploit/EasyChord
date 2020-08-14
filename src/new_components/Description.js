@@ -1,25 +1,10 @@
-import React, { useState, useEffect } from "react";
-import {
-	FormControl,
-	InputLabel,
-	Select,
-	MenuItem,
-	Paper,
-	Grid,
-	Typography,
-} from "@material-ui/core";
-import CardDisplay from "./CardDisplay";
+import React, { useContext } from "react";
 
-function Key({ type }) {
-	const [scale, setScale] = useState("A");
-	const handleChange = (event) => {
-		setScale(event.target.value);
-	};
+import { ScaleContext, ModeContext } from "./Context";
 
-	useEffect(() => {
-		console.log(scale);
-		console.log(type);
-	}, [scale]);
+const Description = () => {
+	const [scale] = useContext(ScaleContext);
+	const [mode] = useContext(ModeContext);
 
 	const scaleDescriptions = {
 		major: {
@@ -69,39 +54,9 @@ function Key({ type }) {
 				"The key of patience, calmly waiting for fate, destiny, and the submission to providence and karma.",
 		},
 	};
+	const displayDescription = scaleDescriptions[mode][scale];
 
-	const displayDescription = () => {
-		return scaleDescriptions[type][scale];
-	};
+	return <p style={{ fontSize: "1.5rem", marginLeft: "0.4em" }}>{displayDescription}</p>;
+};
 
-	return (
-		<div>
-			<Grid container direction="column" spacing={3} alignItems="center">
-				<Grid item>
-					<CardDisplay type={type} scale={scale} displayDescription={displayDescription} />
-				</Grid>
-				<Grid item>
-					<FormControl style={{ marginBottom: 5, marginTop: 5 }}>
-						<InputLabel id="scale-key">Key</InputLabel>
-						<Select labelId="key" id="key-selector" value={scale} onChange={handleChange}>
-							<MenuItem value="A">A</MenuItem>
-							<MenuItem value="Ab">Ab</MenuItem>
-							<MenuItem value="B">B</MenuItem>
-							<MenuItem value="Bb">Bb</MenuItem>
-							<MenuItem value="C">C</MenuItem>
-							<MenuItem value="C_sharp">C#</MenuItem>
-							<MenuItem value="D">D</MenuItem>
-							<MenuItem value="E">E</MenuItem>
-							<MenuItem value="Eb">Eb</MenuItem>
-							<MenuItem value="F">F</MenuItem>
-							<MenuItem value="F_sharp">F#</MenuItem>
-							<MenuItem value="G">G</MenuItem>
-						</Select>
-					</FormControl>
-				</Grid>
-			</Grid>
-		</div>
-	);
-}
-
-export default Key;
+export default Description;

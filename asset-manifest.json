@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/EasyChord/static/css/main.c6c2b12b.chunk.css",
-    "main.js": "/EasyChord/static/js/main.18b0dd6f.chunk.js",
-    "main.js.map": "/EasyChord/static/js/main.18b0dd6f.chunk.js.map",
+    "main.js": "/EasyChord/static/js/main.68b7b2ae.chunk.js",
+    "main.js.map": "/EasyChord/static/js/main.68b7b2ae.chunk.js.map",
     "runtime-main.js": "/EasyChord/static/js/runtime-main.0f8f4ef3.js",
     "runtime-main.js.map": "/EasyChord/static/js/runtime-main.0f8f4ef3.js.map",
-    "static/js/2.6dcb87d6.chunk.js": "/EasyChord/static/js/2.6dcb87d6.chunk.js",
-    "static/js/2.6dcb87d6.chunk.js.map": "/EasyChord/static/js/2.6dcb87d6.chunk.js.map",
+    "static/js/2.75534b7e.chunk.js": "/EasyChord/static/js/2.75534b7e.chunk.js",
+    "static/js/2.75534b7e.chunk.js.map": "/EasyChord/static/js/2.75534b7e.chunk.js.map",
     "index.html": "/EasyChord/index.html",
-    "precache-manifest.fd003d78fdb37264e7f0439db98e0658.js": "/EasyChord/precache-manifest.fd003d78fdb37264e7f0439db98e0658.js",
+    "precache-manifest.1588b3a8dc5b2e7f1fe0fc8795fc84ad.js": "/EasyChord/precache-manifest.1588b3a8dc5b2e7f1fe0fc8795fc84ad.js",
     "service-worker.js": "/EasyChord/service-worker.js",
     "static/css/main.c6c2b12b.chunk.css.map": "/EasyChord/static/css/main.c6c2b12b.chunk.css.map",
-    "static/js/2.6dcb87d6.chunk.js.LICENSE.txt": "/EasyChord/static/js/2.6dcb87d6.chunk.js.LICENSE.txt",
+    "static/js/2.75534b7e.chunk.js.LICENSE.txt": "/EasyChord/static/js/2.75534b7e.chunk.js.LICENSE.txt",
     "static/media/A.png": "/EasyChord/static/media/A.6dd125b7.png",
     "static/media/Ab.png": "/EasyChord/static/media/Ab.f4c10e2f.png",
     "static/media/B.png": "/EasyChord/static/media/B.e0e99972.png",
@@ -27,8 +27,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.0f8f4ef3.js",
-    "static/js/2.6dcb87d6.chunk.js",
+    "static/js/2.75534b7e.chunk.js",
     "static/css/main.c6c2b12b.chunk.css",
-    "static/js/main.18b0dd6f.chunk.js"
+    "static/js/main.68b7b2ae.chunk.js"
   ]
 }

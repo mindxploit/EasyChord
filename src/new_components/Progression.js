@@ -63,14 +63,14 @@ const Progression = () => {
 
 	return (
 		<div>
-			<div style={{ width: "100%", background: "rgba(255, 255, 255, 0.13)", padding: "0.5em" }}>
-				<Typography style={{ fontSize: "11rem" }} align="center" variant="h1">
+			<div style={{ width: "100%", background: "rgba(255, 255, 255, 0.13)" }}>
+				<Typography align="center" variant="h2">
 					{prog}
 				</Typography>
 			</div>
 			<div
 				style={{
-					padding: "2em 0",
+					marginTop: "3em",
 					display: "flex",
 					alignItems: "center",
 					justifyContent: "center",

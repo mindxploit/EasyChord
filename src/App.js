@@ -27,7 +27,7 @@ const App = () => {
 				fontWeight: "bold",
 				fontSize: "8rem",
 				"@media (max-width:520px)": {
-					fontSize: "5rem",
+					fontSize: "4rem",
 				},
 			},
 			body1: {
@@ -37,7 +37,13 @@ const App = () => {
 	});
 
 	return (
-		<Box display="flex" alignContent="center" alignItems="center" minHeight={{ md: "100vh" }}>
+		<Box
+			display="flex"
+			alignContent="center"
+			alignItems="center"
+			minHeight={{ md: "100vh" }}
+			m={{ md: "0 3em" }}
+		>
 			<div
 				style={{
 					border: "2px solid rgba(255,255,255, 0.9)",

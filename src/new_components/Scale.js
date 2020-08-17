@@ -6,7 +6,7 @@ import { Box } from "@material-ui/core";
 
 const Scale = () => {
 	return (
-		<div style={{ width: "90%", margin: "auto", padding: "3em 0" }}>
+		<div style={{ width: "90%", margin: "0 auto", padding: "3em 0" }}>
 			<Box
 				display="flex"
 				justifyContent="space-between"
@@ -16,7 +16,8 @@ const Scale = () => {
 				<Box mr={{ lg: "2em" }} mb={{ xs: "2em", lg: "0" }}>
 					<Piano />
 				</Box>
-				<Box display="flex" flexDirection="column" justifyContent="space-around" width="100%">
+				<Box display="flex" flexDirection="column" justifyContent="space-around" width="100%
+				">
 					<Selector />
 					<Description />
 				</Box>

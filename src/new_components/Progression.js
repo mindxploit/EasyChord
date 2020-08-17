@@ -10,7 +10,6 @@ const useStyles = makeStyles({
 		fontWeight: "bold",
 		fontSize: "1.3em",
 		width: 264,
-		"& :hover": {},
 	},
 });
 

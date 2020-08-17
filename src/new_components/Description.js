@@ -1,10 +1,11 @@
-import React, { useContext } from "react";
-
+import React, { useContext, useEffect, useState } from "react";
 import { ScaleContext, ModeContext } from "./Context";
 
 const Description = () => {
 	const [scale] = useContext(ScaleContext);
 	const [mode] = useContext(ModeContext);
+
+	const [key, setKey] = useState();
 
 	const scaleDescriptions = {
 		major: {
@@ -55,6 +56,10 @@ const Description = () => {
 		},
 	};
 	const displayDescription = scaleDescriptions[mode][scale];
+
+	useEffect(() => {
+		setKey(Math.floor(Math.random() * 100));
+	}, [displayDescription]);
 
 	return <p style={{ fontSize: "1.5rem", margin: "0.4em 0 0 0.4em" }}>{displayDescription}</p>;
 };

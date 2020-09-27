@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "86f8bc26202ad1d4bf2a4dbadd729b18",
+    "revision": "baa0e7eb48f840090f7126c339b7f5bd",
     "url": "/EasyChord/index.html"
   },
   {
-    "revision": "5d4df15ac4f7b660c6fd",
-    "url": "/EasyChord/static/css/main.c6c2b12b.chunk.css"
+    "revision": "02dc481c6d7750e46680",
+    "url": "/EasyChord/static/css/main.30904a05.chunk.css"
   },
   {
-    "revision": "475b98e4925175626291",
-    "url": "/EasyChord/static/js/2.904f34b4.chunk.js"
+    "revision": "d7a1d90f92447063e7a7",
+    "url": "/EasyChord/static/js/2.fa670b23.chunk.js"
   },
   {
     "revision": "0749163b59fbee32225059cb60c18af6",
-    "url": "/EasyChord/static/js/2.904f34b4.chunk.js.LICENSE.txt"
+    "url": "/EasyChord/static/js/2.fa670b23.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "5d4df15ac4f7b660c6fd",
-    "url": "/EasyChord/static/js/main.3e71684c.chunk.js"
+    "revision": "02dc481c6d7750e46680",
+    "url": "/EasyChord/static/js/main.1cb044f4.chunk.js"
   },
   {
-    "revision": "34bb7510705e3f42d0f6",
-    "url": "/EasyChord/static/js/runtime-main.0f8f4ef3.js"
+    "revision": "81373a9a464cc78443bb",
+    "url": "/EasyChord/static/js/runtime-main.fb13bec6.js"
   },
   {
     "revision": "2374a70b459120a08b566087b1ff4613",

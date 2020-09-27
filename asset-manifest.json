@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/EasyChord/static/css/main.c6c2b12b.chunk.css",
-    "main.js": "/EasyChord/static/js/main.3e71684c.chunk.js",
-    "main.js.map": "/EasyChord/static/js/main.3e71684c.chunk.js.map",
-    "runtime-main.js": "/EasyChord/static/js/runtime-main.0f8f4ef3.js",
-    "runtime-main.js.map": "/EasyChord/static/js/runtime-main.0f8f4ef3.js.map",
-    "static/js/2.904f34b4.chunk.js": "/EasyChord/static/js/2.904f34b4.chunk.js",
-    "static/js/2.904f34b4.chunk.js.map": "/EasyChord/static/js/2.904f34b4.chunk.js.map",
+    "main.css": "/EasyChord/static/css/main.30904a05.chunk.css",
+    "main.js": "/EasyChord/static/js/main.1cb044f4.chunk.js",
+    "main.js.map": "/EasyChord/static/js/main.1cb044f4.chunk.js.map",
+    "runtime-main.js": "/EasyChord/static/js/runtime-main.fb13bec6.js",
+    "runtime-main.js.map": "/EasyChord/static/js/runtime-main.fb13bec6.js.map",
+    "static/js/2.fa670b23.chunk.js": "/EasyChord/static/js/2.fa670b23.chunk.js",
+    "static/js/2.fa670b23.chunk.js.map": "/EasyChord/static/js/2.fa670b23.chunk.js.map",
     "index.html": "/EasyChord/index.html",
-    "precache-manifest.b3958f8629314a2da4c0aaab9b547aa4.js": "/EasyChord/precache-manifest.b3958f8629314a2da4c0aaab9b547aa4.js",
+    "precache-manifest.5c25f92ae4a423c61e8ba3397e5ca92d.js": "/EasyChord/precache-manifest.5c25f92ae4a423c61e8ba3397e5ca92d.js",
     "service-worker.js": "/EasyChord/service-worker.js",
-    "static/css/main.c6c2b12b.chunk.css.map": "/EasyChord/static/css/main.c6c2b12b.chunk.css.map",
-    "static/js/2.904f34b4.chunk.js.LICENSE.txt": "/EasyChord/static/js/2.904f34b4.chunk.js.LICENSE.txt",
+    "static/css/main.30904a05.chunk.css.map": "/EasyChord/static/css/main.30904a05.chunk.css.map",
+    "static/js/2.fa670b23.chunk.js.LICENSE.txt": "/EasyChord/static/js/2.fa670b23.chunk.js.LICENSE.txt",
     "static/media/A.png": "/EasyChord/static/media/A.6dd125b7.png",
     "static/media/Ab.png": "/EasyChord/static/media/Ab.f4c10e2f.png",
     "static/media/B.png": "/EasyChord/static/media/B.e0e99972.png",
@@ -26,9 +26,9 @@
     "static/media/G.png": "/EasyChord/static/media/G.f0f799d3.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.0f8f4ef3.js",
-    "static/js/2.904f34b4.chunk.js",
-    "static/css/main.c6c2b12b.chunk.css",
-    "static/js/main.3e71684c.chunk.js"
+    "static/js/runtime-main.fb13bec6.js",
+    "static/js/2.fa670b23.chunk.js",
+    "static/css/main.30904a05.chunk.css",
+    "static/js/main.1cb044f4.chunk.js"
   ]
 }

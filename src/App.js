@@ -1,11 +1,12 @@
 import React from "react"
-import Header from "./new_components/Header"
+import Header from "./Components/Header"
 import { createMuiTheme, ThemeProvider, CssBaseline, Box } from "@material-ui/core"
-import Progression from "./new_components/Progression"
-import Scale from "./new_components/Scale"
-import { GlobalContext } from "./new_components/Context"
+import Progression from "./Components/Progression"
+import Main from "./Components/Main"
+import { GlobalContext } from "./Components/Context"
 import { Fade } from "react-reveal"
 import "./assets/App.css"
+import styled from 'styled-components'
 
 const App = () => {
     const theme = createMuiTheme({
@@ -15,10 +16,10 @@ const App = () => {
         typography: {
             fontFamily: "'Montserrat', 'Fira Sans', sans-serif",
             h1: {
-                fontFamily: "Fira Sans",
+                fontFamily: "Montserrat",
                 fontWeight: "bold",
                 fontSize: "3rem",
-                "@media (max-width:750px)": {
+                "@media (max-width:1277px)": {
                     fontSize: "2rem",
                 },
             },
@@ -34,37 +35,48 @@ const App = () => {
                 fontFamily: "Montserrat",
             },
         },
-    })
+    });
 
+    const ContainerDiv = styled.div`
+        border: 2px solid rgba(255,255,255, 0.9);
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 3em 0;
+        border-radius: 20;
+        min-width: 90%;
+    `;
+
+    const Box = styled.div`
+       display: flex; 
+       justify-content: center;
+       align-items: center;
+       min-height: 100vh;
+       margin: 0 3em; 
+    `
+    
     return (
-        <Box display="flex" alignContent="center" alignItems="center" minHeight={{ md: "100vh" }} m={{ md: "0 3em" }}>
-            <div
-                style={{
-                    border: "2px solid rgba(255,255,255, 0.9)",
-                    height: "100%",
-                    width: "100%",
-                    display: "flex",
-                    flexDirection: "column",
-                    justifyContent: "center",
-                    padding: "3em 0",
-                    borderRadius: 20,
-                }}
-            >
-                <ThemeProvider theme={theme}>
-                    <CssBaseline />
-                    <GlobalContext>
-                        <Fade top duration={2000}>
-                            <Header />
-                        </Fade>
-                        <Fade delay={1000} duration={2000}>
-                            <Scale />
-                        </Fade>
-                        <Fade delay={2000} duration={2000}>
-                            <Progression />
-                        </Fade>
-                    </GlobalContext>
-                </ThemeProvider>
-            </div>
+        <Box>
+            <Fade duration={6000}>
+                <ContainerDiv>
+                    <ThemeProvider theme={theme}>
+                        <CssBaseline />
+                        <GlobalContext>
+                            <Fade up duration={2000}>
+                                <Header />
+                            </Fade>
+                            <Fade delay={1000} duration={2000}>
+                                <Main />
+                            </Fade>
+                            <Fade delay={2000} duration={2000}>
+                                <Progression />
+                            </Fade>
+                        </GlobalContext>
+                    </ThemeProvider>
+                </ContainerDiv>
+            </Fade>
         </Box>
     )
 }

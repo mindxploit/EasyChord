@@ -46,7 +46,10 @@ const App = () => {
         justify-content: center;
         padding: 3em 0;
         border-radius: 20;
-        min-width: 90%;
+        margin: auto;
+        @media (max-width: 480px) {
+            border: none;
+        }
     `;
 
     const Box = styled.div`
@@ -54,7 +57,6 @@ const App = () => {
        justify-content: center;
        align-items: center;
        min-height: 100vh;
-       margin: 0 3em; 
     `
     
     return (

@@ -16,7 +16,7 @@ const Main = () => {
 				<Box mr={{ lg: "2em" }} mb={{ xs: "2em", lg: "0" }}>
 					<Piano />
 				</Box>
-				<Box display="flex" flexDirection="column" justifyContent="space-around" width="100%">
+				<Box display="flex" flexDirection="column" justifyContent={{ xs: 'center', md: "space-around" }} width="100%">
 					<Selector />
 					<Description />
 				</Box>

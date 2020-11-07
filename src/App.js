@@ -41,6 +41,8 @@ const App = () => {
         border: 2px solid rgba(255,255,255, 0.9);
         height: 100%;
         width: 100%;
+        min-height: 100%;
+        min-width: 100%;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -53,7 +55,7 @@ const App = () => {
     `;
 
     const Box = styled.div`
-       display: flex; 
+       display: flex;
        justify-content: center;
        align-items: center;
        min-height: 100vh;

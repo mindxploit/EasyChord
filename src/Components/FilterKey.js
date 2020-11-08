@@ -1,7 +1,7 @@
 import { Checkbox, FormControl, Input, InputLabel, ListItemText, MenuItem, Select } from '@material-ui/core'
 import React, { useEffect, useState } from 'react'
 import { useContext } from 'react';
-import { ScaleContext } from './Context';
+import { ModeContext, ScaleContext } from './Context';
 
 const notes = [
   {note: 'A', value: 'A'},
@@ -29,9 +29,9 @@ const keys = {
     F_sharp: ['F_sharp', 'Ab', 'Bb', 'B', 'C_sharp', 'Eb', 'F', 'F_sharp'],
     G: ['G', 'A', 'B', 'C', 'D', 'E', 'F_sharp', 'G'],
     Ab: ['Ab', 'Bb', 'C', 'Db', 'Eb', 'F', 'G', 'Ab'],
-    A: ['A', 'B', 'C_sharp', 'D', 'E', 'F_sharp', 'G#', 'A'],
+    A: ['A', 'B', 'C_sharp', 'D', 'E', 'F_sharp', 'Ab', 'A'],
     Bb: ['Bb', 'C', 'D', 'Eb', 'F', 'G', 'A', 'Bb'],
-    B: ['B', 'C_sharp', 'Eb', 'E', 'F_sharp', 'Ab', 'A#']
+    B: ['B', 'C_sharp', 'Eb', 'E', 'F_sharp', 'Ab', 'Bb']
   },
   minor : {
     A: ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'A'],
@@ -51,19 +51,43 @@ const keys = {
 
 const FilterKey = () => {
 	const [scale, setScale] = useContext(ScaleContext);
-  const [currentNote, setCurrentNote] = useState([]);
+
+	const [mode, setMode] = useContext(ModeContext);
+  const [currentNotes, setCurrentNotes] = useState([]);
+  const [results, setResults] = useState([]);
 
   const handleChange = (event) => {
-    setCurrentNote(event.target.value);
+    setCurrentNotes(event.target.value);
   }
   
-  const calculateKey = (currentNote) => {
-    
+  const calculateKey = () => {
+    if (mode === 'minor') {
+      let output = {};
+      for (let i in keys.minor) {
+        output = {};
+        let arr = currentNotes.filter(note => keys.minor[i].includes(note))
+        arr.length > 0 && console.log(i)
+        arr.length > 0 && console.log(arr)
+
+        output.note = i
+        output.scale = arr
+        console.log(output)
+      }
+
+    } 
+
+    if (mode === 'major') {
+      console.log('this is major');
+    }
   }
   
   useEffect(() => {
-    console.log(currentNote)
-  }, [currentNote])
+    calculateKey();
+  }, [currentNotes])
+
+  // useEffect(() => {
+  //   console.log(results)
+  // }, [results])
 
   return (
     <div>
@@ -73,7 +97,7 @@ const FilterKey = () => {
           labelId="mutiple-checkbox-key"
           id="mutiple-checkbox-key"
           multiple
-          value={currentNote}
+          value={currentNotes}
           onChange={handleChange}
           renderValue={(selected) => selected.join(', ')}
           // MenuProps={MenuProps}
@@ -81,7 +105,7 @@ const FilterKey = () => {
           {
             notes.map(item => (
               <MenuItem key={item.value} value={item.value}>
-                <Checkbox checked={currentNote.indexOf(item.value) > -1} />
+                <Checkbox checked={currentNotes.indexOf(item.value) > -1} />
                 <ListItemText primary={item.note} />
               </MenuItem>
             ))

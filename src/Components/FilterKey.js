@@ -63,20 +63,19 @@ const FilterKey = () => {
   const calculateKey = () => {
     if (mode === 'minor') {
       let render = []
+
       for (let i in keys.minor) {
         let output = {};
-        let arr = currentNotes.filter(note => keys.minor[i].includes(note))
-        arr.length > 0 && console.log(i)
-        arr.length > 0 && console.log(arr)
-
-        output.note = i
-        output.scale = arr
-        // console.log(output)
-        render = []
-        arr.length > 0 && render.push(output)
+        let notes = currentNotes.filter(note => keys.minor[i].includes(note))
+        if (notes.length > 0 ) {
+          console.log(i)
+          console.log(notes)
+          output.root = i
+          output.notes = keys.minor[i]
+          render.push(output)
+          setResults(...results, render)
+        }
       }
-      setResults(render)
-
     } 
 
     if (mode === 'major') {

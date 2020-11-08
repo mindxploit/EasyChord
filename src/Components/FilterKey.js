@@ -62,17 +62,20 @@ const FilterKey = () => {
   
   const calculateKey = () => {
     if (mode === 'minor') {
-      let output = {};
+      let render = []
       for (let i in keys.minor) {
-        output = {};
+        let output = {};
         let arr = currentNotes.filter(note => keys.minor[i].includes(note))
         arr.length > 0 && console.log(i)
         arr.length > 0 && console.log(arr)
 
         output.note = i
         output.scale = arr
-        console.log(output)
+        // console.log(output)
+        render = []
+        arr.length > 0 && render.push(output)
       }
+      setResults(render)
 
     } 
 
@@ -85,9 +88,9 @@ const FilterKey = () => {
     calculateKey();
   }, [currentNotes])
 
-  // useEffect(() => {
-  //   console.log(results)
-  // }, [results])
+  useEffect(() => {
+    console.log(results)
+  }, [results])
 
   return (
     <div>

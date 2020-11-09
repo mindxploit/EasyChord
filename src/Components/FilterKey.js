@@ -35,7 +35,7 @@ const keys = {
   },
   minor : {
     A: ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'A'],
-    Bb: ['Bb', 'C', 'C_sharp', 'E', 'F', 'F_sharp', 'Ab'],
+    Bb: ['Bb', 'C', 'C_sharp', 'Eb', 'F', 'F_sharp', 'Ab'],
     B: ['B', 'C_sharp', 'D', 'E', 'F_sharp', 'G', 'A', 'B'],
     C: ['C', 'D', 'Eb', 'F', 'G', 'Ab', 'Bb', 'C'],
     C_sharp: ['C_sharp', 'Eb', 'E', 'F_sharp', 'Ab', 'A', 'B'],
@@ -105,7 +105,7 @@ const FilterKey = () => {
 
   return (
     <div>
-      <FormControl style={{ minWidth: 130 }}>
+      <FormControl style={{ width: 130 }}>
         <InputLabel id="key-checkbox">Filter by note</InputLabel>
         <Select
           labelId="mutiple-checkbox-key"

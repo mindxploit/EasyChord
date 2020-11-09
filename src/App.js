@@ -45,12 +45,15 @@ const App = () => {
         min-width: 100%;
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        /* justify-content: center; */
         padding: 3em 0;
         border-radius: 20;
         margin: auto;
         @media (max-width: 480px) {
             border: none;
+        }
+        @media (min-width: 1275px) {
+            min-width: 1150px;
         }
     `;
 

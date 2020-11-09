@@ -51,7 +51,6 @@ const keys = {
 
 const FilterKey = () => {
 	const [scale, setScale] = useContext(ScaleContext);
-
 	const [mode, setMode] = useContext(ModeContext);
   const [currentNotes, setCurrentNotes] = useState([]);
   const [results, setResults] = useState([]);
@@ -62,6 +61,7 @@ const FilterKey = () => {
   
   const calculateKey = () => {
     setResults([])
+    
     if (mode === 'minor') {
       let render = []
 
@@ -69,19 +69,29 @@ const FilterKey = () => {
         let output = {};
         let notes = currentNotes.every(note => keys.minor[i].includes(note))
         if (notes) {
-          // console.log(i)
-          console.log(notes)
           output.root = i
           output.notes = keys.minor[i]
           render.push(output)
         }
-        setResults(render)
       }
+      setResults(render)
     } 
 
     if (mode === 'major') {
-      console.log('this is major');
+      let render = []
+
+      for (let i in keys.major) {
+        let output = {};
+        let notes = currentNotes.every(note => keys.major[i].includes(note))
+        if (notes) {
+          output.root = i
+          output.notes = keys.major[i]
+          render.push(output)
+        }
+      }
+      setResults(render)
     }
+
   }
   
   useEffect(() => {
@@ -90,6 +100,7 @@ const FilterKey = () => {
 
   useEffect(() => {
     console.log(results)
+    results.length > 0 && setScale(results[0].root)
   }, [results])
 
   return (

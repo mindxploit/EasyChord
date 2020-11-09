@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "fe981c585273afc30678f4477a89c7c2",
+    "revision": "58850d3c793b36cafde51aa8ec054890",
     "url": "/EasyChord/index.html"
   },
   {
-    "revision": "549b4d50d23a7f9dae03",
+    "revision": "24ff80cbf0c2df161d3b",
     "url": "/EasyChord/static/css/main.c6c2b12b.chunk.css"
   },
   {
-    "revision": "5b21ebc7765f4cfaf360",
-    "url": "/EasyChord/static/js/2.711907fd.chunk.js"
+    "revision": "65b94c31f2e632e3a04f",
+    "url": "/EasyChord/static/js/2.fd9c3fea.chunk.js"
   },
   {
     "revision": "0749163b59fbee32225059cb60c18af6",
-    "url": "/EasyChord/static/js/2.711907fd.chunk.js.LICENSE.txt"
+    "url": "/EasyChord/static/js/2.fd9c3fea.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "549b4d50d23a7f9dae03",
-    "url": "/EasyChord/static/js/main.f13e2cc9.chunk.js"
+    "revision": "24ff80cbf0c2df161d3b",
+    "url": "/EasyChord/static/js/main.e2cf741b.chunk.js"
   },
   {
     "revision": "81373a9a464cc78443bb",

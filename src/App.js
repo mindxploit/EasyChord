@@ -39,21 +39,20 @@ const App = () => {
 
     const ContainerDiv = styled.div`
         border: 2px solid rgba(255,255,255, 0.9);
-        height: 100%;
-        width: 100%;
+        /* height: 100%;
+        width: 100%; */
         min-height: 100%;
         min-width: 100%;
         display: flex;
         flex-direction: column;
         /* justify-content: center; */
         padding: 3em 0;
-        border-radius: 20;
         margin: auto;
         @media (max-width: 480px) {
             border: none;
         }
-        @media (min-width: 1275px) {
-            min-width: 1150px;
+        @media (min-width: 1475px) {
+            min-width: 1490px;
         }
     `;
 

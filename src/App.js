@@ -1,6 +1,6 @@
 import React from "react"
 import Header from "./Components/Header"
-import { createMuiTheme, ThemeProvider, CssBaseline, Box } from "@material-ui/core"
+import { createMuiTheme, ThemeProvider, CssBaseline } from "@material-ui/core"
 import Progression from "./Components/Progression"
 import Main from "./Components/Main"
 import { GlobalContext } from "./Components/Context"
@@ -54,7 +54,7 @@ const App = () => {
         }
     `;
 
-    const Box = styled.div`
+    const AppContainer = styled.div`
        display: flex;
        justify-content: center;
        align-items: center;
@@ -62,7 +62,7 @@ const App = () => {
     `
     
     return (
-        <Box>
+        <AppContainer>
             <Fade duration={6000}>
                 <ContainerDiv>
                     <ThemeProvider theme={theme}>
@@ -81,7 +81,7 @@ const App = () => {
                     </ThemeProvider>
                 </ContainerDiv>
             </Fade>
-        </Box>
+        </AppContainer>
     )
 }
 

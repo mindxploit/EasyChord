@@ -67,6 +67,9 @@ const ScaleSelector = () => {
 					value={scale}
 					onChange={handleChange}
 					input={<BootstrapInput />}
+          MenuProps={{
+            getContentAnchorEl: () => null,
+          }}
 				>
 					<MenuItem value="A">A</MenuItem>
 					<MenuItem value="Ab">Ab</MenuItem>

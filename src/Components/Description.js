@@ -62,6 +62,9 @@ const Description = () => {
 		font-size: 1.25rem;
 		margin: 0.4em 0 0 0.4em;
 		max-width: 800px;
+		@media (max-width: 480px) {
+			font-size: 1rem;
+		}
 	`;
 
 	useEffect(() => {

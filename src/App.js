@@ -27,7 +27,7 @@ const App = () => {
                 fontFamily: "Fira Sans",
                 fontWeight: "bold",
                 fontSize: "8rem",
-                "@media (max-width:520px)": {
+                "@media (max-width:650px)": {
                     fontSize: "4rem",
                 },
             },
@@ -39,13 +39,10 @@ const App = () => {
 
     const ContainerDiv = styled.div`
         border: 2px solid rgba(255,255,255, 0.9);
-        /* height: 100%;
-        width: 100%; */
         min-height: 100%;
         min-width: 100%;
         display: flex;
         flex-direction: column;
-        /* justify-content: center; */
         padding: 3em 0;
         margin: auto;
         @media (max-width: 480px) {

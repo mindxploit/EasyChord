@@ -4,18 +4,18 @@ import { useContext } from 'react';
 import { ModeContext, ScaleContext } from './Context';
 
 const notes = [
-  {note: 'A', value: 'A'},
-  {note: 'Ab', value: 'Ab'},
-  {note: 'B', value: 'B'},
-  {note: 'Bb', value: 'Bb'},
   {note: 'C', value: 'C'},
-  {note: 'C#', value: 'C_sharp'},
+  {note: 'C#/Db', value: 'C_sharp'},
   {note: 'D', value: 'D'},
+  {note: 'D#/Eb', value: 'Eb'},
   {note: 'E', value: 'E'},
-  {note: 'Eb', value: 'Eb'},
   {note: 'F', value: 'F'},
-  {note: 'F#', value: 'F_sharp'},
-  {note: 'G', value: 'G'}
+  {note: 'F#/Gb', value: 'F_sharp'},
+  {note: 'G', value: 'G'},
+  {note: 'G#/Ab', value: 'Ab'},
+  {note: 'A', value: 'A'},
+  {note: 'A#/Bb', value: 'Bb'},
+  {note: 'B', value: 'B'},
 ]
 
 const keys = {

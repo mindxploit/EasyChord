@@ -50,8 +50,9 @@ const App = () => {
         margin: auto;
         @media (max-width: 480px) {
             border: none;
+            padding-top: 0;
         }
-        @media (min-width: 1475px) {
+        @media (min-width: 1490px) {
             min-width: 1490px;
         }
     `;

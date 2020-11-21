@@ -64,6 +64,7 @@ const Description = () => {
 		max-width: 800px;
 		@media (max-width: 480px) {
 			font-size: 1rem;
+			min-height: 110px;
 		}
 	`;
 

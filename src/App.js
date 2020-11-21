@@ -55,12 +55,15 @@ const App = () => {
     `;
 
     const AppContainer = styled.div`
-       display: flex;
-       justify-content: center;
-       align-items: center;
-       min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        @media (max-width: 480px) {
+            align-items: flex-start;
+        }
     `
-    
+
     return (
         <AppContainer>
             <Fade duration={6000}>

@@ -66,10 +66,12 @@ const Progression = () => {
 
 		if (mode === "minor") {
 			let numRomans = numProg.map((e) => romansMinor[e - 1]);
-			setProg(numRomans.toString().replace(/,/g, "-"));
+			let convertedProg = numRomans.toString().replace(/,/g, "-");
+			prog === convertedProg ? handleClick() : setProg(convertedProg);
 		} else {
 			let numRomans = numProg.map((e) => romansMajor[e - 1]);
-			setProg(numRomans.toString().replace(/,/g, "-"));
+			let convertedProg = numRomans.toString().replace(/,/g, "-");
+			prog === convertedProg ? handleClick() : setProg(convertedProg);
 		}
 	};
 

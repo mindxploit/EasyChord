@@ -1,4 +1,4 @@
-import { Checkbox, FormControl, Input, InputLabel, ListItemText, MenuItem, Select } from '@material-ui/core'
+import { Checkbox, FormControl, InputLabel, ListItemText, MenuItem, Select } from '@material-ui/core'
 import React, { useEffect, useState } from 'react'
 import { useContext } from 'react';
 import { ModeContext, ScaleContext } from './Context';

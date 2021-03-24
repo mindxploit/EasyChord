@@ -54,11 +54,6 @@ const FilterKey = () => {
 	const [mode, setMode] = useContext(ModeContext);
   const [currentNotes, setCurrentNotes] = useState([]);
   const [results, setResults] = useState([]);
-  
-  useEffect(() => {
-    setResults([])
-    setCurrentNotes([])
-  }, [mode])
 
   const handleChange = (event) => {
     setCurrentNotes(event.target.value);

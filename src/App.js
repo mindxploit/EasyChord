@@ -38,12 +38,13 @@ const App = () => {
     });
 
     const ContainerDiv = styled.div`
-        border: 2px solid rgba(255,255,255, 0.9);
-        min-height: 100%;
-        min-width: 100%;
+        box-sizing: border-box;
+        border: 2px solid rgba(255,255,255, 0.5);
+        height: 900px;
         display: flex;
         flex-direction: column;
-        padding: 3em 0;
+        justify-content: space-around;
+        padding: 2em 0;
         margin: auto;
         @media (max-width: 480px) {
             border: none;
@@ -65,12 +66,12 @@ const App = () => {
     `
 
     return (
-        <AppContainer>
-            <Fade duration={6000}>
-                <ContainerDiv>
-                    <ThemeProvider theme={theme}>
-                        <CssBaseline />
-                        <GlobalContext>
+        <ThemeProvider theme={theme}>
+            <GlobalContext>
+                <AppContainer>
+                    <Fade duration={6000}>
+                        <ContainerDiv>
+                            <CssBaseline />
                             <Fade up duration={2000}>
                                 <Header />
                             </Fade>
@@ -80,11 +81,11 @@ const App = () => {
                             <Fade delay={2000} duration={2000}>
                                 <Progression />
                             </Fade>
-                        </GlobalContext>
-                    </ThemeProvider>
-                </ContainerDiv>
-            </Fade>
-        </AppContainer>
+                        </ContainerDiv>
+                    </Fade>
+                </AppContainer>
+            </GlobalContext>
+        </ThemeProvider>
     )
 }
 

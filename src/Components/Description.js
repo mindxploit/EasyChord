@@ -1,12 +1,10 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext } from "react";
 import { ScaleContext, ModeContext } from "./Context";
 import styled from 'styled-components';
 
 const Description = () => {
   const [scale] = useContext(ScaleContext);
   const [mode] = useContext(ModeContext);
-
-  const [key, setKey] = useState();
 
   const scaleDescriptions = {
     major: {
@@ -69,10 +67,6 @@ const Description = () => {
       min-height: 110px;
     }
   `;
-
-  useEffect(() => {
-    setKey(Math.floor(Math.random() * 100));
-  }, [displayDescription]);
 
   return <ScaleDescription>{displayDescription}</ScaleDescription>;
 };

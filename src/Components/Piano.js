@@ -9,9 +9,14 @@ const Container = styled.div`
   width: 650px;
   max-height: 216px;
   max-width: 85vw;
+
+  p {
+    font-family: 'Montserrat';
+    font-weight: bold;
+  }
 `
 
-const WhiteKey = styled.div`
+const WhiteKey = styled.button`
   position: relative;
   display: flex;
   justify-content: center;
@@ -34,7 +39,7 @@ const WhiteKey = styled.div`
   `}
 `
 
-const BlackKey = styled.div`
+const BlackKey = styled.button`
   position: relative;
   display: flex;
   justify-content: center;

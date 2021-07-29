@@ -25,6 +25,13 @@ const WhiteKey = styled.div`
       display: none;
     }
   `}
+
+  ${({ root }) => root && `
+    p {
+      text-decoration: underline red;
+      text-underline-offset: 2px;
+    }
+  `}
 `
 
 const BlackKey = styled.div`
@@ -45,6 +52,13 @@ const BlackKey = styled.div`
   ${({ inKey }) => !inKey && `
     p {
       display: none;
+    }
+  `}
+
+  ${({ root }) => root && `
+    p {
+      text-decoration: underline red;
+      text-underline-offset: 2px;
     }
   `}
 `
@@ -79,53 +93,33 @@ const Piano = () => {
   const Octave = () => {
     const scaleNotes = keys[mode][scale]
     const hasSharp = isSharp(mode, scale)
-
-    return (
-      <>
-        <WhiteKey inKey={scaleNotes.includes('C')}>
-          <NoteName>C</NoteName>
-        </WhiteKey>
-        <BlackKey inKey={scaleNotes.includes('C_sharp')}>
-          <NoteName>{hasSharp ? 'C#' : 'Db'}</NoteName>
-        </BlackKey>
-        <WhiteKey inKey={scaleNotes.includes('D')}>
-          <NoteName>D</NoteName>
-        </WhiteKey>
-        <BlackKey inKey={scaleNotes.includes('Eb')}>
-          <NoteName>{hasSharp ? 'D#' : 'Eb'}</NoteName>
-        </BlackKey>
-        <WhiteKey inKey={scaleNotes.includes('E')}>
-          <NoteName>E</NoteName>
-        </WhiteKey>
-        <WhiteKey inKey={scaleNotes.includes('F')}>
-          <NoteName>F</NoteName>
-        </WhiteKey>
-        <BlackKey inKey={scaleNotes.includes('F_sharp')}>
-          <NoteName>{hasSharp ? 'F#' : 'Gb'}</NoteName>
-        </BlackKey>
-        <WhiteKey inKey={scaleNotes.includes('G')}>
-          <NoteName>G</NoteName>
-        </WhiteKey>
-        <BlackKey inKey={scaleNotes.includes('Ab')}>
-          <NoteName>{hasSharp ? 'G#' : 'Ab'}</NoteName>
-        </BlackKey>
-        <WhiteKey inKey={scaleNotes.includes('A')}>
-          <NoteName>A</NoteName>
-        </WhiteKey>
-        <BlackKey inKey={scaleNotes.includes('Bb')}>
-          <NoteName>{hasSharp ? 'A#' : 'Bb'}</NoteName>
-        </BlackKey>
-        <WhiteKey inKey={scaleNotes.includes('B')}>
-          <NoteName>B</NoteName>
-        </WhiteKey>
-      </>
-    )
+    const allNotes = notes.map(n => n.value);
+    
+    const keysRender = allNotes.map(note => {
+      return (
+        note.length === 1 ? (
+          <WhiteKey root={scale === note} inKey={scaleNotes.includes(note)}>
+            <NoteName>{note[0]}</NoteName>
+          </WhiteKey>
+        ) : (
+          <BlackKey root={scale === note} inKey={scaleNotes.includes(note)}>
+            <NoteName>{note[0]}{hasSharp ? '#' : 'b'}</NoteName>
+          </BlackKey>
+        )
+      )
+    })
+    
+    return keysRender
   }
 
   return (
     <Container>
-      <Octave />
-      <Octave />
+      <>
+        <Octave />
+      </>
+      <>
+        <Octave />
+      </>
     </Container>
   );
 };

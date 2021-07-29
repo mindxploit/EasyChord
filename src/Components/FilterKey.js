@@ -58,7 +58,7 @@ const FilterKey = () => {
   }, [results])
 
   return (
-    <div>
+    <div style={{ marginTop: 10 }}>
       <FormControl style={{ width: 130 }}>
         <InputLabel id="key-checkbox">Filter by note</InputLabel>
         <Select

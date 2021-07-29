@@ -1,7 +1,8 @@
-import React, { useContext } from "react"
-import { ModeContext, ScaleContext } from "./Context"
+import React, { useContext, useEffect } from "react"
+import { ModeContext, ProgContext, ScaleContext } from "./Context"
 import styled from 'styled-components'
 import { keys, notes } from "./Scales/Scales"
+import * as Tone from 'tone'
 
 const Container = styled.div`
   /* border: 1px solid black; */
@@ -77,6 +78,53 @@ const NoteName = styled.p`
 const Piano = () => {
   const [scale] = useContext(ScaleContext)
   const [mode] = useContext(ModeContext)
+  const [progNumber, setProgNumber] = useContext(ProgContext);
+  const scaleNotes = keys[mode][scale]
+  
+  const synth = new Tone.PolySynth().toDestination();
+  
+  const calculateChord = (scale, progression) => {
+    // duplicating scale until i find a way to loop back to the beginning of the array
+    const doubleScale = scale.concat(scale);
+    
+    const chords = progNumber.map((el, i) => {
+      const root = progression[i] - 1
+      const chord = [doubleScale[root]]
+      chord.push(doubleScale[root + 2])
+      chord.push(doubleScale[root + 4])
+      return chord
+    })
+    
+    console.log(chords);
+
+    // const octaveChords = chords.map(chord => {
+    //   chords.map((note, i) => `${note[i]}3`)
+    // });
+
+    // console.log(octaveChords)
+    return chords
+  }
+
+  
+  useEffect(() => {
+    if (progNumber) {
+      const chords = calculateChord(scaleNotes, progNumber);
+
+      let finalChords = []
+
+      chords.forEach((group) => {
+        finalChords.push(group.map(note => `${note}4`))
+      });
+
+      console.log(finalChords)
+      playCordProg(finalChords)
+    }
+
+  }, [progNumber])
+  
+  const playCordProg = (chords) => {
+    // setInterval(() => synth.triggerAttackRelease(chords[0], "4n"), 2000)
+  }
   
   const isSharp = (mode, scale) => {
     if (mode === 'minor') {

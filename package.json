@@ -1,6 +1,6 @@
 {
 	"homepage": "http://mindxploit.github.io/EasyChord",
-	"name": "material-app",
+	"name": "easy-chord",
 	"version": "0.1.0",
 	"private": true,
 	"dependencies": {

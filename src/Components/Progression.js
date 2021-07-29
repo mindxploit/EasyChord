@@ -1,6 +1,6 @@
 import React, { useState, useContext, useEffect } from "react";
 import { Typography, Button } from "@material-ui/core";
-import { ModeContext } from "./Context";
+import { ModeContext, ProgContext } from "./Context";
 import { makeStyles } from "@material-ui/core/styles";
 import styled from 'styled-components';
 
@@ -34,7 +34,8 @@ const progressions = {
 
 const Progression = () => {
   const classes = useStyles();
-  const [prog, setProg] = useState();
+  const [prog, setProg] = useState()
+  const [progNumber, setProgNumber] = useContext(ProgContext);
   const [mode] = useContext(ModeContext);
 
   const ButtonContainer = styled.div`
@@ -52,7 +53,6 @@ const Progression = () => {
 
   useEffect(() => {
     handleClick();
-    // eslint-disable-next-line
   }, [mode]);
 
   const handleClick = () => {
@@ -62,6 +62,7 @@ const Progression = () => {
   };
 
   const convertInRomans = (progression) => {
+    setProgNumber(progression);
     const romansMajor = ["I", "ii", "iii", "IV", "V", "vi", "vii°"];
     const romansMinor = ["i", "ii°", "III", "iv", "v", "VI", "VII"];
     let numProg = Array.from(progression);

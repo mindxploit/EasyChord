@@ -47,6 +47,7 @@ const Progression = () => {
   const TextContainer = styled.div`
     width: 100%;	
     background: rgba(255, 255, 255, 0.13);
+    box-shadow: 0px 5px 13px 0px rgba(0,0,0,0.2);
   `;
 
   useEffect(() => {

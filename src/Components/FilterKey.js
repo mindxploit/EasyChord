@@ -94,12 +94,14 @@ const FilterKey = () => {
   }
   
   useEffect(() => {
-    calculateKey();
+    calculateKey() 
+    // eslint-disable-next-line
   }, [currentNotes])
 
   useEffect(() => {
     console.log(results)
     results.length > 0 && setScale(results[0].root)
+    // eslint-disable-next-line
   }, [results])
 
   return (

@@ -147,18 +147,21 @@ const Piano = () => {
     const allNotes = notes.map(n => n.note);
     
     const keysRender = allNotes.map(note => {
+      const blackNote = hasSharp ? note.slice(0, 2) : note.slice(3);
+
       return (
         note.length === 1 ? (
           <WhiteKey root={scale === note} inKey={scaleNotes.includes(note)}>
             <NoteName>{note[0]}</NoteName>
           </WhiteKey>
         ) : (
-          <BlackKey root={scale === note} inKey={scaleNotes.includes(hasSharp ? note.slice(0 ,2) : note.slice(3))}>
-            <NoteName>{hasSharp ? note.slice(0, 2) : note.slice(3)}</NoteName>
+          <BlackKey root={scaleNotes[0] === blackNote} inKey={scaleNotes.includes(blackNote)}>
+            <NoteName>{blackNote}</NoteName>
           </BlackKey>
         )
       )
     })
+
     console.log(scaleNotes);
     return keysRender
   }

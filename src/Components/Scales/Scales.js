@@ -35,7 +35,7 @@ export const keys = {
     C: ['C', 'D', 'Eb', 'F', 'G', 'Ab', 'Bb', 'C'],
     C_sharp: ['C#', 'D#', 'E', 'F#', 'G#', 'A', 'B'],
     D: ['D', 'E', 'F', 'G', 'A', 'Bb', 'C'],
-    Eb: ['Eb', 'F', 'F#', 'Ab', 'Bb', 'B', 'C#'],
+    Eb: ['Eb', 'F', 'Gb', 'Ab', 'Bb', 'B', 'Db'],
     E: ['E', 'F#', 'G', 'A', 'B', 'C', 'D'],
     F: ['F', 'G', 'Ab', 'Bb', 'C', 'Db', 'Eb'],
     F_sharp: ['F#', 'G#', 'A', 'B', 'C#', 'D', 'E'],

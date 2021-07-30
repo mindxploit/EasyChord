@@ -125,14 +125,14 @@ const Piano = () => {
   
   const isSharp = (mode, scale) => {
     if (mode === 'minor') {
-      const scaleWithSharps = ['E', 'B', 'F_sharp', 'C_sharp', 'Ab']
+      const scaleWithSharps = ['E', 'B', 'F_sharp', 'C_sharp']
       if (scaleWithSharps.includes(scale)) {
         return true
       } else {
         return false
       }
     } else {
-      const scaleWithSharps = ['G', 'D', 'A', 'E', 'B']
+      const scaleWithSharps = ['G', 'D', 'A', 'E', 'B', 'C_sharp', 'F_sharp']
       if (scaleWithSharps.includes(scale)) {
         return true
       } else {
@@ -159,7 +159,7 @@ const Piano = () => {
         )
       )
     })
-    console.log(keysRender);
+    console.log(scaleNotes);
     return keysRender
   }
 

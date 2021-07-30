@@ -16,30 +16,30 @@ export const notes = [
 export const keys = {
   major: {
     C: ['C', 'D', 'E', 'F', 'G', 'A', 'B'],
-    C_sharp: ['C#', 'Eb', 'F', 'F#', 'Ab', 'Bb', 'C'],
+    C_sharp: ['C#', 'D#', 'F', 'F#', 'G#', 'A#', 'C'],
     D: ['D', 'E', 'F#', 'G', 'A', 'B', 'C#'],
     Eb: ['Eb', 'F', 'G', 'Ab', 'Bb', 'C', 'D'],
-    E: ['E', 'F#', 'Ab', 'A', 'B', 'C#', 'Eb'],
+    E: ['E', 'F#', 'G#', 'A', 'B', 'C#', 'D#'],
     F: ['F', 'G', 'A', 'Bb', 'C', 'D', 'E'],
-    F_sharp: ['F#', 'Ab', 'Bb', 'B', 'C#', 'Eb', 'F'],
+    F_sharp: ['F#', 'G#', 'A#', 'B', 'C#', 'D#', 'F'],
     G: ['G', 'A', 'B', 'C', 'D', 'E', 'F#'],
     Ab: ['Ab', 'Bb', 'C', 'Db', 'Eb', 'F', 'G'],
     A: ['A', 'B', 'C#', 'D', 'E', 'F#', 'Ab'],
     Bb: ['Bb', 'C', 'D', 'Eb', 'F', 'G', 'A'],
-    B: ['B', 'C#', 'Eb', 'E', 'F#', 'Ab', 'Bb']
+    B: ['B', 'C#', 'D#', 'E', 'F#', 'G#', 'A#']
   },
   minor : {
     A: ['A', 'B', 'C', 'D', 'E', 'F', 'G'],
-    Bb: ['Bb', 'C', 'C#', 'Eb', 'F', 'F#', 'Ab'],
+    Bb: ['Bb', 'C', 'Db', 'Eb', 'F', 'Gb', 'Ab'],
     B: ['B', 'C#', 'D', 'E', 'F#', 'G', 'A'],
     C: ['C', 'D', 'Eb', 'F', 'G', 'Ab', 'Bb', 'C'],
-    C_sharp: ['C#', 'Eb', 'E', 'F#', 'Ab', 'A', 'B'],
+    C_sharp: ['C#', 'D#', 'E', 'F#', 'G#', 'A', 'B'],
     D: ['D', 'E', 'F', 'G', 'A', 'Bb', 'C'],
     Eb: ['Eb', 'F', 'F#', 'Ab', 'Bb', 'B', 'C#'],
     E: ['E', 'F#', 'G', 'A', 'B', 'C', 'D'],
     F: ['F', 'G', 'Ab', 'Bb', 'C', 'Db', 'Eb'],
-    F_sharp: ['F#', 'Ab', 'A', 'B', 'C#', 'D', 'E'],
+    F_sharp: ['F#', 'G#', 'A', 'B', 'C#', 'D', 'E'],
     G: ['G', 'A', 'Bb', 'C', 'D', 'Eb', 'F'],
-    Ab: ['Ab', 'Bb', 'B', 'C#', 'Eb', 'E', 'F#']
+    Ab: ['Ab', 'Bb', 'B', 'Db', 'Eb', 'E', 'Gb']
   }
 }

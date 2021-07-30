@@ -97,16 +97,15 @@ const Piano = () => {
     
     console.log(chords);
 
-    // const octaveChords = chords.map(chord => {
-    //   chords.map((note, i) => `${note[i]}3`)
-    // });
-
-    // console.log(octaveChords)
     return chords
   }
 
+  const handlePlay = () => {
+    const playCordProg = (chords) => {
+      const now = Tone.now()
+      chords.forEach((chord, index) => synth.triggerAttackRelease(chord, "1n", now + index * 2))
+    }
   
-  useEffect(() => {
     if (progNumber) {
       const chords = calculateChord(scaleNotes, progNumber);
 
@@ -117,13 +116,11 @@ const Piano = () => {
       });
 
       console.log(finalChords)
+
+      // added sub octave
+      finalChords.forEach(chord => chord.push(`${chord[0][0]}2`))
       playCordProg(finalChords)
     }
-
-  }, [progNumber])
-  
-  const playCordProg = (chords) => {
-    // setInterval(() => synth.triggerAttackRelease(chords[0], "4n"), 2000)
   }
   
   const isSharp = (mode, scale) => {
@@ -147,7 +144,7 @@ const Piano = () => {
   const Octave = () => {
     const scaleNotes = keys[mode][scale]
     const hasSharp = isSharp(mode, scale)
-    const allNotes = notes.map(n => n.value);
+    const allNotes = notes.map(n => n.note);
     
     const keysRender = allNotes.map(note => {
       return (
@@ -156,13 +153,13 @@ const Piano = () => {
             <NoteName>{note[0]}</NoteName>
           </WhiteKey>
         ) : (
-          <BlackKey root={scale === note} inKey={scaleNotes.includes(note)}>
-            <NoteName>{note[0]}{hasSharp ? '#' : 'b'}</NoteName>
+          <BlackKey root={scale === note} inKey={scaleNotes.includes(hasSharp ? note.slice(0 ,2) : note.slice(3))}>
+            <NoteName>{hasSharp ? note.slice(0, 2) : note.slice(3)}</NoteName>
           </BlackKey>
         )
       )
     })
-    
+    console.log(keysRender);
     return keysRender
   }
 
@@ -174,6 +171,7 @@ const Piano = () => {
       <>
         <Octave />
       </>
+      {/* <button onClick={() => handlePlay()}>play</button> */}
     </Container>
   );
 };

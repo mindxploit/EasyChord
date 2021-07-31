@@ -81,48 +81,6 @@ const Piano = () => {
   const [progNumber, setProgNumber] = useContext(ProgContext);
   const scaleNotes = keys[mode][scale]
   
-  const synth = new Tone.PolySynth().toDestination();
-  
-  const calculateChord = (scale, progression) => {
-    // duplicating scale until i find a way to loop back to the beginning of the array
-    const doubleScale = scale.concat(scale);
-    
-    const chords = progNumber.map((el, i) => {
-      const root = progression[i] - 1
-      const chord = [doubleScale[root]]
-      chord.push(doubleScale[root + 2])
-      chord.push(doubleScale[root + 4])
-      return chord
-    })
-    
-    console.log(chords);
-
-    return chords
-  }
-
-  const handlePlay = () => {
-    const playCordProg = (chords) => {
-      const now = Tone.now()
-      chords.forEach((chord, index) => synth.triggerAttackRelease(chord, "1n", now + index * 2))
-    }
-  
-    if (progNumber) {
-      const chords = calculateChord(scaleNotes, progNumber);
-
-      let finalChords = []
-
-      chords.forEach((group) => {
-        finalChords.push(group.map(note => `${note}4`))
-      });
-
-      console.log(finalChords)
-
-      // added sub octave
-      finalChords.forEach(chord => chord.push(`${chord[0][0]}2`))
-      playCordProg(finalChords)
-    }
-  }
-  
   const isSharp = (mode, scale) => {
     if (mode === 'minor') {
       const scaleWithSharps = ['E', 'B', 'F_sharp', 'C_sharp']
@@ -168,13 +126,8 @@ const Piano = () => {
 
   return (
     <Container>
-      <>
-        <Octave />
-      </>
-      <>
-        <Octave />
-      </>
-      {/* <button onClick={() => handlePlay()}>play</button> */}
+      <Octave />
+      <Octave />
     </Container>
   );
 };

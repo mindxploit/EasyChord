@@ -28,6 +28,7 @@ const progressions = {
   ],
   major: [
     [1, 4, 5],
+    [4, 5, 6],
     [1, 6, 4, 5],
     [2, 5, 1],
     [1, 5, 6, 4],
@@ -108,7 +109,7 @@ const Progression = () => {
 
     const playCordProg = (chords) => {
       const now = Tone.now()
-      chords.forEach((chord, index) => synth.triggerAttackRelease(chord, 1.5, now + index * 2))
+      chords.forEach((chord, index) => synth.triggerAttackRelease(chord, 1.5, now + index * 2, 0.7))
       setTimeout(() => setPlaying(false), `${chords.length * 2}000`);
     }
   

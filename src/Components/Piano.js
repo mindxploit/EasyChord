@@ -2,10 +2,9 @@ import React, { useContext, useEffect } from "react"
 import { ModeContext, ProgContext, ScaleContext } from "./Context"
 import styled from 'styled-components'
 import { keys, notes } from "./Scales/Scales"
-import * as Tone from 'tone'
+import Media from 'react-media';
 
 const Container = styled.div`
-  /* border: 1px solid black; */
   display: flex;
   width: 650px;
   max-height: 216px;
@@ -23,7 +22,7 @@ const WhiteKey = styled.button`
   display: flex;
   justify-content: center;
   height: 200px;
-  width: 50px;
+  width: 55px;
   background-color: ${p => p.inKey ? 'white' : 'white'};
   border: 1px solid #AAAAAA;
 
@@ -125,10 +124,19 @@ const Piano = () => {
   }
 
   return (
-    <Container>
-      <Octave />
-      <Octave />
-    </Container>
+    <Media query="(max-width: 470px)">
+      { match =>
+        match ? (
+          <Container>
+            <Octave />
+          </Container>
+        ) : (
+          <Container>
+            <Octave />
+            <Octave />
+          </Container>
+        )}
+    </Media>
   );
 };
 

@@ -13,6 +13,7 @@
 		"@types/styled-components": "^5.1.11",
 		"react": "^16.13.1",
 		"react-dom": "^16.13.1",
+		"react-ga": "^3.3.0",
 		"react-icons": "^3.10.0",
 		"react-media": "^1.10.0",
 		"react-reveal": "^1.2.2",

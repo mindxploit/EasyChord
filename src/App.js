@@ -7,6 +7,10 @@ import { GlobalContext } from "./Components/Context"
 import { Fade } from "react-reveal"
 import "./assets/App.css"
 import styled from 'styled-components'
+import ReactGA from 'react-ga'
+
+ReactGA.initialize('G-7N50LGCT09')
+ReactGA.pageview(window.location.pathname + window.location.search)
 
 const App = () => {
   const theme = createMuiTheme({

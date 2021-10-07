@@ -2,6 +2,7 @@ import React from "react";
 import Selector from "./Selector";
 import Piano from "./Piano";
 import Description from "./Description";
+import { Fade } from "react-reveal"
 import { Box } from "@material-ui/core";
 
 const Main = () => {
@@ -18,7 +19,9 @@ const Main = () => {
         </Box>
         <Box display="flex" flexDirection="column" justifyContent={{ xs: 'center', md: "space-around" }} width="100%">
           <Selector />
-          <Description />
+          <Fade>
+            <Description />
+          </Fade>
         </Box>
       </Box>
     </div>

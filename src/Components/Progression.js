@@ -1,5 +1,6 @@
 import React, { useState, useContext, useEffect } from "react";
-import { Typography, Button, IconButton } from "@material-ui/core";
+import { Typography, Button, IconButton, Paper } from "@material-ui/core";
+import { Fade } from "react-reveal"
 import { ModeContext, ProgContext, ScaleContext } from "./Context";
 import { makeStyles } from "@material-ui/core/styles";
 import styled from 'styled-components';
@@ -38,7 +39,7 @@ const progressions = {
 
 const Progression = () => {
   const classes = useStyles();
-  const [prog, setProg] = useState()
+  const [prog, setProg] = useState([])
   const [progNumber, setProgNumber] = useContext(ProgContext);
   const [mode] = useContext(ModeContext);
   const [scale] = useContext(ScaleContext)
@@ -46,6 +47,10 @@ const Progression = () => {
   const [playing, setPlaying] = useState(false);
 
   const synth = new Tone.PolySynth().toDestination();
+  
+  const Chord = styled(Paper)`
+    width: 180px;
+  `
 
   const ButtonContainer = styled.div`
     margin-top: 3em;
@@ -56,8 +61,11 @@ const Progression = () => {
 
   const TextContainer = styled.div`
     width: 100%;	
+    padding: 20px 0;
     background: rgba(255, 255, 255, 0.13);
     box-shadow: 0px 5px 13px 0px rgba(0,0,0,0.2);
+    display: flex;
+    justify-content: space-evenly;
   `;
 
   useEffect(() => {
@@ -78,12 +86,12 @@ const Progression = () => {
 
     if (mode === "minor") {
       let numRomans = numProg.map((e) => romansMinor[e - 1]);
-      let convertedProg = numRomans.toString().replace(/,/g, "-");
-      prog === convertedProg ? handleClick() : setProg(convertedProg);
+      // let convertedProg = numRomans.toString().replace(/,/g, "-");
+      prog === numRomans ? handleClick() : setProg(numRomans);
     } else {
       let numRomans = numProg.map((e) => romansMajor[e - 1]);
-      let convertedProg = numRomans.toString().replace(/,/g, "-");
-      prog === convertedProg ? handleClick() : setProg(convertedProg);
+      // let convertedProg = numRomans.toString().replace(/,/g, "-");
+      prog === numRomans ? handleClick() : setProg(numRomans);
     }
   };
 
@@ -133,9 +141,15 @@ const Progression = () => {
   return (
     <div>
       <TextContainer>
-        <Typography align="center" variant="h2">
-          {prog}
-        </Typography>
+        {prog && prog.map((el) => (
+          <Fade>
+            <Chord elevation={3}>
+              <Typography align="center" variant="h2">
+                {el}
+              </Typography>
+            </Chord>
+          </Fade>
+        ))}
       </TextContainer>
       <ButtonContainer>
         <Button variant="outlined" className={classes.root} onClick={handleClick}>

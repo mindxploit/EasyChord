@@ -71,10 +71,6 @@ const ScaleSelector = () => {
             getContentAnchorEl: () => null,
           }}
         >
-          <MenuItem value="A">A</MenuItem>
-          <MenuItem value="Ab">Ab</MenuItem>
-          <MenuItem value="B">B</MenuItem>
-          <MenuItem value="Bb">Bb</MenuItem>
           <MenuItem value="C">C</MenuItem>
           <MenuItem value="C_sharp">C#</MenuItem>
           <MenuItem value="D">D</MenuItem>
@@ -83,6 +79,10 @@ const ScaleSelector = () => {
           <MenuItem value="F">F</MenuItem>
           <MenuItem value="F_sharp">F#</MenuItem>
           <MenuItem value="G">G</MenuItem>
+          <MenuItem value="A">A</MenuItem>
+          <MenuItem value="Ab">Ab</MenuItem>
+          <MenuItem value="B">B</MenuItem>
+          <MenuItem value="Bb">Bb</MenuItem>
         </Select>
       </FormControl>
     </div>

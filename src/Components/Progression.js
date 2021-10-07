@@ -148,7 +148,7 @@ const Progression = () => {
             <Typography align="center" variant="h2">
               {el}
             </Typography>
-            <Typography variant="h5" align="center">
+            <Typography variant="h6" align="center">
               {scaleNotes[progNumber[index] - 1]}
             </Typography>
           </Chord>

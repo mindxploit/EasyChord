@@ -50,6 +50,7 @@ const Progression = () => {
   
   const Chord = styled(Paper)`
     width: 180px;
+    padding-bottom: 10px;
   `
 
   const ButtonContainer = styled.div`
@@ -70,6 +71,7 @@ const Progression = () => {
 
   useEffect(() => {
     handleClick();
+    console.log(progNumber);
   }, [mode]);
 
   const handleClick = () => {
@@ -141,10 +143,13 @@ const Progression = () => {
   return (
     <div>
       <TextContainer>
-        {prog && prog.map((el) => (
+        {prog && prog.map((el, index) => (
           <Chord elevation={0}>
             <Typography align="center" variant="h2">
               {el}
+            </Typography>
+            <Typography variant="h5" align="center">
+              {scaleNotes[progNumber[index] - 1]}
             </Typography>
           </Chord>
         ))}

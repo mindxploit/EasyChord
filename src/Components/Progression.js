@@ -142,13 +142,11 @@ const Progression = () => {
     <div>
       <TextContainer>
         {prog && prog.map((el) => (
-          <Fade>
-            <Chord elevation={3}>
-              <Typography align="center" variant="h2">
-                {el}
-              </Typography>
-            </Chord>
-          </Fade>
+          <Chord elevation={0}>
+            <Typography align="center" variant="h2">
+              {el}
+            </Typography>
+          </Chord>
         ))}
       </TextContainer>
       <ButtonContainer>

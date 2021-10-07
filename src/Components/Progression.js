@@ -71,7 +71,6 @@ const Progression = () => {
 
   useEffect(() => {
     handleClick();
-    console.log(progNumber);
   }, [mode]);
 
   const handleClick = () => {
@@ -112,8 +111,6 @@ const Progression = () => {
         return chord
       })
       
-      console.log(chords);
-
       return chords
     }
 
@@ -131,8 +128,6 @@ const Progression = () => {
       chords.forEach((group) => {
         finalChords.push(group.map(note => `${note}4`))
       });
-
-      console.log(finalChords)
 
       // added sub octave
       finalChords.forEach(chord => chord.push(`${chord[0][0]}2`))

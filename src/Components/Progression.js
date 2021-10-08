@@ -51,6 +51,9 @@ const Progression = () => {
   const Chord = styled(Paper)`
     width: 180px;
     padding-bottom: 10px;
+    @media (max-width: 480px) {
+      width: 90px;
+    }
   `
 
   const ButtonContainer = styled.div`

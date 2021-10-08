@@ -59,12 +59,11 @@ const Description = () => {
   
   const ScaleDescription = styled.p`
     font-size: 1.25rem;
-    margin: 0.4em 0 0 0.4em;
+    margin: 0.8em 0 0.8em 0.4em;
     max-width: 800px;
     height: 60px;
     @media (max-width: 480px) {
       font-size: 1rem;
-      min-height: 110px;
     }
   `;
 

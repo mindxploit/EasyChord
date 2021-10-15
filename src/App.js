@@ -44,7 +44,6 @@ const App = () => {
   const ContainerDiv = styled.div`
     box-sizing: border-box;
     border: 2px solid rgba(255,255,255, 0.5);
-    height: 900px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -55,7 +54,7 @@ const App = () => {
       padding-top: 0;
     }
     @media (min-width: 1490px) {
-      min-width: 1490px;
+      width: 90vw;
     }
   `;
 
@@ -64,6 +63,7 @@ const App = () => {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
+    max-width: 100vw;
     @media (max-width: 480px) {
       align-items: flex-start;
     }

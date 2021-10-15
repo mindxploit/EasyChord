@@ -43,3 +43,24 @@ export const keys = {
     Ab: ['Ab', 'Bb', 'B', 'Db', 'Eb', 'E', 'Gb']
   }
 }
+
+export const romansMajor = ["I", "ii", "iii", "IV", "V", "vi", "vii°"];
+export const romansMinor = ["i", "ii°", "III", "iv", "v", "VI", "VII"];
+export const progressions = {
+  minor: [
+    [1, 6, 7],
+    [1, 4, 7],
+    [1, 4, 5],
+    [1, 6, 3, 7],
+    [2, 5, 1],
+    [1, 7, 4, 4],
+  ],
+  major: [
+    [1, 4, 5],
+    [4, 5, 6],
+    [1, 6, 4, 5],
+    [2, 5, 1],
+    [1, 5, 6, 4],
+    [1, 5, 5, 2],
+  ],
+};

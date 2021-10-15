@@ -1,11 +1,10 @@
 import React, { useState, useContext, useEffect } from "react";
-import { Typography, Button, IconButton, Paper } from "@material-ui/core";
-import { Fade } from "react-reveal"
+import { Typography, Button, IconButton, Paper, Dialog } from "@material-ui/core";
 import { ModeContext, ProgContext, ScaleContext } from "./Context";
 import { makeStyles } from "@material-ui/core/styles";
-import styled from 'styled-components';
-import { keys } from "./Scales/Scales";
+import { keys, progressions, romansMajor, romansMinor } from "./Scales/Scales";
 import PlayArrowIcon from '@material-ui/icons/PlayArrow';
+import styled from 'styled-components';
 import * as Tone from 'tone'
 
 const useStyles = makeStyles({
@@ -18,28 +17,50 @@ const useStyles = makeStyles({
   },
 });
 
-const progressions = {
-  minor: [
-    [1, 6, 7],
-    [1, 4, 7],
-    [1, 4, 5],
-    [1, 6, 3, 7],
-    [2, 5, 1],
-    [1, 7, 4, 4],
-  ],
-  major: [
-    [1, 4, 5],
-    [4, 5, 6],
-    [1, 6, 4, 5],
-    [2, 5, 1],
-    [1, 5, 6, 4],
-    [1, 5, 5, 2],
-  ],
-};
+const ChordsContainer = styled.div`
+  display: flex;
+  > * {
+    padding: 0.2em 0.5em;
+    cursor: pointer;
+  }
+
+  overflow: hidden;
+`
+
+const Chord = styled(Paper)`
+  width: 180px;
+  padding-bottom: 10px;
+  cursor: pointer;
+  user-select: none;
+  @media (max-width: 480px) {
+    width: 90px;
+  }
+  &:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+`
+
+const ButtonContainer = styled.div`
+  margin-top: 3em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;
+
+const TextContainer = styled.div`
+  width: 100%;	
+  padding: 20px 0;
+  background: rgba(255, 255, 255, 0.13);
+  box-shadow: 0px 5px 13px 0px rgba(0,0,0,0.2);
+  display: flex;
+  justify-content: space-evenly;
+`;
 
 const Progression = () => {
   const classes = useStyles();
   const [prog, setProg] = useState([])
+  const [selectedChord, setSelectedChord] = useState(null)
+  const [open, setOpen] = useState(false)
   const [progNumber, setProgNumber] = useContext(ProgContext);
   const [mode] = useContext(ModeContext);
   const [scale] = useContext(ScaleContext)
@@ -48,30 +69,6 @@ const Progression = () => {
 
   const synth = new Tone.PolySynth().toDestination();
   
-  const Chord = styled(Paper)`
-    width: 180px;
-    padding-bottom: 10px;
-    @media (max-width: 480px) {
-      width: 90px;
-    }
-  `
-
-  const ButtonContainer = styled.div`
-    margin-top: 3em;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  `;
-
-  const TextContainer = styled.div`
-    width: 100%;	
-    padding: 20px 0;
-    background: rgba(255, 255, 255, 0.13);
-    box-shadow: 0px 5px 13px 0px rgba(0,0,0,0.2);
-    display: flex;
-    justify-content: space-evenly;
-  `;
-
   useEffect(() => {
     handleClick();
   }, [mode]);
@@ -84,8 +81,6 @@ const Progression = () => {
 
   const convertInRomans = (progression) => {
     setProgNumber(progression);
-    const romansMajor = ["I", "ii", "iii", "IV", "V", "vi", "vii°"];
-    const romansMinor = ["i", "ii°", "III", "iv", "v", "VI", "VII"];
     let numProg = Array.from(progression);
 
     if (mode === "minor") {
@@ -119,7 +114,7 @@ const Progression = () => {
 
     const playCordProg = (chords) => {
       const now = Tone.now()
-      chords.forEach((chord, index) => synth.triggerAttackRelease(chord, 1.5, now + index * 2, 0.7))
+      chords.forEach((chord, index) => synth.triggerAttackRelease(chord, 1.5, now + index * 2, 0.6))
       setTimeout(() => setPlaying(false), `${chords.length * 2}000`);
     }
   
@@ -137,12 +132,37 @@ const Progression = () => {
       playCordProg(finalChords)
     }
   }
+  
+  const handleClose = () => {
+    setOpen(false)
+  }
+  
+  const modifyProgression = (i) => {
+    const newProg = [...progNumber]
+    newProg[selectedChord] = i + 1
+
+    setProgNumber(newProg)
+    convertInRomans(newProg)
+    setSelectedChord(null)
+    setOpen(false)
+  }
 
   return (
     <div>
+      <Dialog maxWidth="md" open={open} onClose={handleClose}>
+        <ChordsContainer>
+          { mode === 'minor' ?
+            romansMinor.map((el, i) => <Typography onClick={() => modifyProgression(i)} variant="h3">{el}</Typography>) :
+            romansMajor.map((el, i) => <Typography onClick={() => modifyProgression(i)} variant="h3">{el}</Typography>) }
+        </ChordsContainer>
+      </Dialog>
       <TextContainer>
         {prog && prog.map((el, index) => (
-          <Chord elevation={0}>
+          <Chord
+            onClick={() => {
+            setSelectedChord(index);
+            setOpen(!open)
+          }} elevation={0}>
             <Typography align="center" variant="h2">
               {el}
             </Typography>

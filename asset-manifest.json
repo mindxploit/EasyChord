@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/EasyChord/static/css/main.c81bb1d5.chunk.css",
-    "main.js": "/EasyChord/static/js/main.ad4404e7.chunk.js",
-    "main.js.map": "/EasyChord/static/js/main.ad4404e7.chunk.js.map",
+    "main.css": "/EasyChord/static/css/main.53daf335.chunk.css",
+    "main.js": "/EasyChord/static/js/main.d3885656.chunk.js",
+    "main.js.map": "/EasyChord/static/js/main.d3885656.chunk.js.map",
     "runtime-main.js": "/EasyChord/static/js/runtime-main.1e39a81a.js",
     "runtime-main.js.map": "/EasyChord/static/js/runtime-main.1e39a81a.js.map",
-    "static/js/2.788c02e2.chunk.js": "/EasyChord/static/js/2.788c02e2.chunk.js",
-    "static/js/2.788c02e2.chunk.js.map": "/EasyChord/static/js/2.788c02e2.chunk.js.map",
+    "static/js/2.1995a381.chunk.js": "/EasyChord/static/js/2.1995a381.chunk.js",
+    "static/js/2.1995a381.chunk.js.map": "/EasyChord/static/js/2.1995a381.chunk.js.map",
     "index.html": "/EasyChord/index.html",
-    "static/css/main.c81bb1d5.chunk.css.map": "/EasyChord/static/css/main.c81bb1d5.chunk.css.map",
-    "static/js/2.788c02e2.chunk.js.LICENSE.txt": "/EasyChord/static/js/2.788c02e2.chunk.js.LICENSE.txt"
+    "static/css/main.53daf335.chunk.css.map": "/EasyChord/static/css/main.53daf335.chunk.css.map",
+    "static/js/2.1995a381.chunk.js.LICENSE.txt": "/EasyChord/static/js/2.1995a381.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.1e39a81a.js",
-    "static/js/2.788c02e2.chunk.js",
-    "static/css/main.c81bb1d5.chunk.css",
-    "static/js/main.ad4404e7.chunk.js"
+    "static/js/2.1995a381.chunk.js",
+    "static/css/main.53daf335.chunk.css",
+    "static/js/main.d3885656.chunk.js"
   ]
 }

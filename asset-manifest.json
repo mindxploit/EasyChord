@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/EasyChord/static/css/main.53daf335.chunk.css",
-    "main.js": "/EasyChord/static/js/main.d3885656.chunk.js",
-    "main.js.map": "/EasyChord/static/js/main.d3885656.chunk.js.map",
+    "main.js": "/EasyChord/static/js/main.f1ea8927.chunk.js",
+    "main.js.map": "/EasyChord/static/js/main.f1ea8927.chunk.js.map",
     "runtime-main.js": "/EasyChord/static/js/runtime-main.1e39a81a.js",
     "runtime-main.js.map": "/EasyChord/static/js/runtime-main.1e39a81a.js.map",
     "static/js/2.1995a381.chunk.js": "/EasyChord/static/js/2.1995a381.chunk.js",
@@ -15,6 +15,6 @@
     "static/js/runtime-main.1e39a81a.js",
     "static/js/2.1995a381.chunk.js",
     "static/css/main.53daf335.chunk.css",
-    "static/js/main.d3885656.chunk.js"
+    "static/js/main.f1ea8927.chunk.js"
   ]
 }

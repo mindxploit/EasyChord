@@ -24,6 +24,10 @@ const ChordsContainer = styled.div`
     cursor: pointer;
   }
 
+  @media (max-width: 700px) {
+    flex-direction: column;
+  }
+
   overflow: hidden;
 `
 
